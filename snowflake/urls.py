@@ -6,8 +6,8 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     # Examples:
-    url(r'^$', 'snowflake.views.home', name='home'),
-    url(r'^test/$', snowflake.views.home')
+    url(r'^/$', 'snowflake.views.home', name='home'),
+    url(r'^test/$', snowflake.views.home', name='home')
     # url(r'^snowflake/', include('snowflake.foo.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
