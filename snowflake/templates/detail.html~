@@ -1,0 +1,5 @@
+<h1>{{p.question}}</h1>
+<form action="/frontend/{{p.id}}/submit/" method="post">
+<input type="text" name="response">
+<input type="submit" value="Post">
+</form>
