@@ -7,7 +7,7 @@ from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('frontend.views',
-    url(r'^frontend/$', include('frontend.urls')),                   
+    url(r'^frontend/', include('frontend.urls')),                   
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
     url(r'^admin/', include(admin.site.urls)),
 
