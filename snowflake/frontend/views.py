@@ -6,6 +6,9 @@ from frontend.models import Entry, Response
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 
+def yeah(request):
+    return render_to_response('first.html')
+
 def home(request):
     entries = Response.objects.order_by('question')
     p = Entry.objects.order_by('answers')
