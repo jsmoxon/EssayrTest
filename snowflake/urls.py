@@ -13,3 +13,7 @@ urlpatterns = patterns('frontend.views',
     url(r'^admin/', include(admin.site.urls)),
 
 )
+
+urlpatterns += patterns('django.contrib.staticfiles.views',
+    url(r'^static/(?P<path>.*)$', 'serve', kwargs={"insecure": True}),
+)
