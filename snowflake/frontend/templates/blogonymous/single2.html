@@ -1,0 +1,26 @@
+<html>
+<head>
+<link rel="stylesheet" href="http://twitter.github.com/bootstrap/assets/css/bootstrap-1.2.0.min.css">
+<style rel="stlesheet" type="text/css">
+
+</style>
+</head>
+
+<body>
+<div class="container">
+
+<h1>{{p.question}}</h1>
+<h2>{{p.desc}}</h2>
+{% for answer in p.response_set.all %}
+<h4>{{answer.headline}}</h4>
+<p>{{answer.body_text|linebreaks}}</p>
+<form action="/blogonymous/single/{{ p.id }}/upvote/" method="post">
+{% csrf_token %}
+<input type="submit" class="btn primary" value="+1" name="votes" />
+</form>
+{% endfor%}
+
+<a href="/blogonymous/">Go Home!</a>
+
+
+</div>

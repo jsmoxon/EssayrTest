@@ -1,0 +1,26 @@
+{% load static %}
+
+<html>
+<head>
+<link rel="stylesheet" href="http://twitter.github.com/bootstrap/assets/css/bootstrap-1.2.0.min.css">
+
+</head>
+
+<body>
+<div class="container">
+
+<h1>{{p.question}}</h1>
+<p>{{p.desc}}</p>
+</br>
+<form action="/blogonymous/submit/{{p.id}}/enter/" method="post">
+{% csrf_token %}
+<input type="text" size="105" name="headline" id="headline"/>
+</br>
+<textarea name="body_text" cols="50" rows="10"></textarea>
+</br>
+<input class="btn primary" type="submit" value="Enter!" />
+</form>
+<a href="/blogonymous/single/{{p.id}}/">See previous answers</a>
+
+</div>
+</body>

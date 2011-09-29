@@ -1,0 +1,40 @@
+<html>
+<head>
+<link rel="stylesheet" href="http://twitter.github.com/bootstrap/assets/css/bootstrap-1.2.0.min.css">
+<style rel="stlesheet" type="text/css">
+p{
+width: 400px;
+}
+#textfill {
+color: blue;
+}
+
+</style>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+<script type="text/javascript">
+
+</script>
+
+</head>
+
+<body>
+<div class="container">
+
+<h1>{{p.question}}</h1>
+<p>{{p.desc}}</p>
+{% for answer in q reversed %}
+<h4>{{answer.headline}}</h4>
+<p>{{answer.body_text|linebreaks|truncatewords:100}}</p>
+<a href="/blogonymous/post/{{p.id}}/{{answer.id}}/">See full post</a>
+<form action="/blogonymous/single/{{ p.id }}/upvote/" method="post">
+{% csrf_token %}
+<input type="hidden" name="headline" id="headline{{ forloop.counter }}" value="{{ answer.id}}" />
+<input type="submit" class="btn primary" value="+1" />
+</form>
+{% endfor %}
+
+
+<a href="/blogonymous/">Go Home!</a>
+
+
+</div>

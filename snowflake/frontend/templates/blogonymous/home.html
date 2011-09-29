@@ -1,0 +1,27 @@
+<html>
+<head>
+<link rel="stylesheet" href="http://twitter.github.com/bootstrap/assets/css/bootstrap-1.2.0.min.css">
+
+</head>
+
+<body>
+<div class="container">
+</br></br>
+<h1>Questions</h1>
+{% for entry in p reversed %}
+<li><a href="/blogonymous/submit/{{entry.id}}/"> {{entry.question }}</a> </li>
+
+{% endfor %}
+
+</br></br></br>
+
+</br>
+<a href="/blogonymous/question/">Submit a question!</a>
+</br>
+<a href="/blogonymous/about/">About</a>
+
+
+</div>
+
+
+</body>
