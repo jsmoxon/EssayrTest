@@ -9,9 +9,7 @@
 </br></br>
 <h1>Questions</h1>
 {% for entry in p reversed %}
-{% if entry.active %}
 <li><a href="/blogonymous/submit/{{entry.id}}/"> {{entry.question }}</a> </li>
-{% endif %}
 {% endfor %}
 
 </br></br></br>
