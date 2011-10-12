@@ -9,7 +9,7 @@
 </br></br>
 <h1>Questions</h1>
 {% for entry in p reversed %}
-<li><a href="/blogonymous/submit/{{entry.id}}/"> {{entry.question }}</a> </li>
+<li><a href="/blogonymous/submit/{{entry.id}}/"> {{entry.question }}</a> - {{entry.answers}} </li>
 {% endfor %}
 
 </br></br></br>

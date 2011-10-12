@@ -10,7 +10,6 @@
 <h1>Questions</h1>
 {% for entry in p reversed %}
 <li><a href="/blogonymous/submit/{{entry.id}}/"> {{entry.question }}</a> </li>
-
 {% endfor %}
 
 </br></br></br>
@@ -18,7 +17,7 @@
 </br>
 <a href="/blogonymous/question/">Submit a question!</a>
 </br>
-<a href="/blogonymous/">Home</a>
+<a href="/blogonymous/about/">About</a>
 
 
 </div>
