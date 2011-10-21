@@ -1,2 +1,37 @@
-<h1>test</h1>
-<h3>made some changes here</h3>
+{% load static %}
+<html>
+<head>
+<link rel="stylesheet" href="http://twitter.github.com/bootstrap/assets/css/bootstrap-1.2.0.min.css">
+<link rel="stylesheet" href="{% get_static_prefix%}css/style.css">
+
+</head>
+
+<body>
+<div class="container">
+
+<center><h1>{{p.question}}</h1></center>
+<center><h4>{{p.desc}}</h4></center>
+</br>
+<div id="main"><center>
+<form action="/blogonymous/submit/{{p.id}}/enter/" method="post">
+{% csrf_token %}
+<input type="text" name="headline" id="headline" value="Title"/>
+</br>
+<textarea name="body_text" id="body_text">Enter your story here.</textarea>
+</br></br>
+<input class="primary" type="submit" value="Enter!" />
+</form>
+<a href="/blogonymous/single/{{p.id}}/">See previous answers</a>
+
+</center></div><!--closes main-->
+
+<div class="span16" id="footer"><center>
+<li><a href="http://essayr.info">Essayr</a></li>
+<li><a href="www.google.com">About</a></li>
+<li><a href="www.google.com">Past Questions</a></li>
+<li><a href="www.google.com">Random Story</a></li>
+</center>
+</div><!--closes footer-->
+</div><!--closes container-->
+</body>
+

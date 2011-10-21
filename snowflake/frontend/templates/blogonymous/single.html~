@@ -29,7 +29,7 @@ color: blue;
 <form action="/blogonymous/single/{{ p.id }}/upvote/" method="post">
 {% csrf_token %}
 <input type="hidden" name="headline" id="headline{{ forloop.counter }}" value="{{ answer.id}}" />
-<input type="submit" class="btn primary" value="+1" />
+<input type="submit" class="btn primary" value="upvote" />
 </form>
 {% endfor %}
 

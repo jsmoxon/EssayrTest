@@ -8,7 +8,7 @@ admin.autodiscover()
 
 urlpatterns = patterns('frontend.views',
     url(r'^blogonymous/', include('frontend.urls')),                   
-    url(r'^yeah/', 'yeah'),
+    #url(r'^yeah/', 'yeah'),
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', include('frontend.urls'))

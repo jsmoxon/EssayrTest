@@ -1,26 +1,13 @@
-<html>
-<head>
-<link rel="stylesheet" href="http://twitter.github.com/bootstrap/assets/css/bootstrap-1.2.0.min.css">
+{% extends "blogonymous/base.html"%}
 
-</head>
-
-<body>
-<div class="container">
+{% block main %}
+<div id="main">
 </br></br>
-<h1>Questions</h1>
+<center><h1>Questions</h1>
 {% for entry in p reversed %}
 <li><a href="/blogonymous/submit/{{entry.id}}/"> {{entry.question }}</a> - {{entry.answers}} </li>
+
 {% endfor %}
-
-</br></br></br>
-
-</br>
-<a href="/blogonymous/question/">Submit a question!</a>
-</br>
-<a href="/blogonymous/about/">About</a>
-
-
+</center>
 </div>
-
-
-</body>
+{% endblock main%}
