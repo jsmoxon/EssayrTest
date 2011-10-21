@@ -24,9 +24,7 @@ color: blue;
 <p>{{p.desc}}</p>
 <h4>{{q.headline}}</h4>
 <p>{{q.body_text|linebreaks}}</p>
-<form action="/blogonymous/single/{{ p.id }}/upvote/" method="post">
-{% csrf_token %}
-<input type="hidden" name="headline" id="headline{{ forloop.counter }}" value="{{ answer.id}}" />
+<form action="/blogonymous/post/{{ p.id }}/{{ q.id }}/upvote_post/" method="get">
 <input type="submit" class="btn primary" value="+1" />
 </form>
 

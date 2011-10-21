@@ -6,6 +6,8 @@ from frontend.models import Entry, Response
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 
+
+
 def homepage(request):
     return render_to_response('blogonymous/homepage.html')
 
@@ -42,6 +44,12 @@ def enter(request, entry_id):
     p.save()
     return HttpResponseRedirect(reverse('frontend.views.single', args=(p.id,)))
 
+def blog_post(request, entry_id, answer_id):
+    p = get_object_or_404(Entry, pk=entry_id)
+    q = get_object_or_404(Response, pk=answer_id)
+    return render_to_response('blogonymous/post.html', {"p":p, "q":q})
+
+
 #upvote
 def upvote(request, entry_id):
     p = get_object_or_404(Entry, pk=entry_id)
@@ -50,11 +58,14 @@ def upvote(request, entry_id):
     selected_response.save()
     return HttpResponseRedirect(reverse('frontend.views.single', args=(p.id,)))
 
-def blog_post(request, entry_id, answer_id):
+#upvote post
+def upvote_post(request, entry_id, answer_id):
     p = get_object_or_404(Entry, pk=entry_id)
-    q = get_object_or_404(Response, pk=answer_id)
-    return render_to_response('blogonymous/post.html', {"p":p, "q":q})
-    
+    selected_response = p.response_set.get(pk=answer_id)
+    selected_response.votes += 1
+    selected_response.save()
+    return HttpResponseRedirect(reverse('frontend.views.blog_post', args=(p.id,selected_response.id)))
+
 
 def question(request):
     return render_to_response('blogonymous/question.html', context_instance=RequestContext(request))

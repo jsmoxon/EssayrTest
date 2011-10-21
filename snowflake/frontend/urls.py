@@ -19,4 +19,5 @@ urlpatterns = patterns('frontend.views',
     (r'^question/enter/$', 'question_submit'),
     (r'^about', 'about'),
     (r'^single/(?P<entry_id>\d+)/upvote/', 'upvote'),                   
+    (r'^post/(?P<entry_id>\d+)/(?P<answer_id>\d+)/upvote_post/', 'upvote_post')
 )

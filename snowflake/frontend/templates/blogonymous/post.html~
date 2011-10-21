@@ -24,15 +24,13 @@ color: blue;
 <p>{{p.desc}}</p>
 <h4>{{q.headline}}</h4>
 <p>{{q.body_text|linebreaks}}</p>
-<form action="/frontend/single/{{ p.id }}/upvote/" method="post">
-{% csrf_token %}
-<input type="hidden" name="headline" id="headline{{ forloop.counter }}" value="{{ answer.id}}" />
+<form action="/blogonymous/post/{{ p.id }}/{{ q.id }}/upvote_post/" method="get">
 <input type="submit" class="btn primary" value="+1" />
 </form>
 
-<a href="/frontend/single/{{p.id}}/">Return to posts</a>
+<a href="/blogonymous/single/{{p.id}}/">Return to posts</a>
 </br>
-<a href="/frontend/">Go Home!</a>
+<a href="/blogonymous/">Go Home!</a>
 
 
 </div>
