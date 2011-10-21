@@ -1,7 +1,7 @@
 {% extends "blogonymous/base.html"%}
 
 {% block main %}
-<center>
+
 <h1>{{p.question}}</h1>
 <p>{{p.desc}}</p>
 {% for answer in q reversed %}
@@ -13,5 +13,5 @@
 <input type="hidden" name="headline" id="headline{{ forloop.counter }}" value="{{ answer.id}}" />
 <input type="submit" class="primary" value="upvote" />
 </form>
-{% endfor %}</center>
+{% endfor %}
 {% endblock main%}
