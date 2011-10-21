@@ -22,7 +22,7 @@ min-height: 400px;
 
 #main li {
 text-align: left;
-margin-left:400px
+margin-left:300px
 }
 
 #about {
