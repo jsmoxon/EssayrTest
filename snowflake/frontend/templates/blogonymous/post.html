@@ -25,7 +25,7 @@ color: blue;
 <h4>{{q.headline}}</h4>
 <p>{{q.body_text|linebreaks}}</p>
 <form action="/blogonymous/post/{{ p.id }}/{{ q.id }}/upvote_post/" method="get">
-<input type="submit" class="btn primary" value="+1" />
+<input type="submit" class="btn primary" value="upvote" />
 </form>
 
 <a href="/blogonymous/single/{{p.id}}/">Return to posts</a>
