@@ -1,26 +1,21 @@
-{% load static %}
+{% extends "base.html" %}
 
-<html>
-<head>
-<link rel="stylesheet" href="http://twitter.github.com/bootstrap/assets/css/bootstrap-1.2.0.min.css">
 
-</head>
-
-<body>
-<div class="container">
-
-<h1>{{p.question}}</h1>
-<p>{{p.desc}}</p>
+{% block main %}
+<center><h1>{{p.question}}</h1></center>
+<center><h4>{{p.desc}}</h4></center>
 </br>
-<form action="/frontend/submit/{{p.id}}/enter/" method="post">
+<div id="main"><center>
+<form action="/submit/{{p.id}}/enter/" method="post">
 {% csrf_token %}
-<input type="text" size="105" name="headline" id="headline"/>
+<input type="text" name="headline" id="headline" value="Title"/>
 </br>
-<textarea name="body_text" cols="50" rows="10"></textarea>
-</br>
-<input class="btn primary" type="submit" value="Enter!" />
+<textarea name="body_text" id="body_text">Enter your story here.</textarea>
+</br></br>
+<input class="primary" type="submit" value="Enter!" />
 </form>
-<a href="/frontend/single/{{p.id}}/">See previous answers</a>
+<a href="/single/{{p.id}}/">See previous answers</a>
 
-</div>
-</body>
+</center></div><!--closes main-->
+
+{% endblock main%}

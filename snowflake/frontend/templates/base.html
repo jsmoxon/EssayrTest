@@ -1,0 +1,22 @@
+{% load static %}
+<html>
+<head>
+<link rel="stylesheet" href="http://twitter.github.com/bootstrap/assets/css/bootstrap-1.2.0.min.css">
+<link rel="stylesheet" href="{% get_static_prefix%}css/style.css">
+
+</head>
+
+<body>
+<div class="container">
+{% block main %}
+{% endblock main %}
+
+<div class="span16" id="footer"><center>
+<li><a href="/">Essayr</a></li>
+<li><a href="/about/">About</a></li>
+<li><a href="/">Past Questions</a></li>
+<li><a href="/question/">Submit a Question</a></li>
+</center>
+</div><!--closes footer-->
+</div><!--closes container-->
+</body>

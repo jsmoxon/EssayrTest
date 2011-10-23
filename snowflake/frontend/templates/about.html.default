@@ -1,8 +1,12 @@
-{% extends "base.html"%}
+<html>
+<head>
+<link rel="stylesheet" href="http://twitter.github.com/bootstrap/assets/css/bootstrap-1.2.0.min.css">
 
-{% block main %}
-<div class="row">
-<div class="span8" id="about">
+</head>
+
+<body>
+<div class="container">
+</br></br>
 <h1>About</h1>
 </br>
 <p>Essayer is the French word for “to try”. That's what this site is: an attempt.
@@ -16,7 +20,15 @@ The site is deliberately simple. It encourages anonymity and exclusiveness, not 
 </br></br>
 The project is inspired by my friends' experiences with writing and <a href="http://www.paulgraham.com/essay.html">this essay</a> by Paul Graham.
 </p>
-</div><!--closes div main-->
-</div><!--closes div row-->
 
-{% endblock main %}
+
+
+</br>
+<a href="/blogonymous/question/">Submit a question!</a>
+</br>
+<a href="/blogonymous/">Home</a>
+
+</div>
+
+
+</body>
