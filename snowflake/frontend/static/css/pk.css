@@ -1,0 +1,92 @@
+body {
+background-color: black;
+font-family: 'arial';
+font-weight: lighter;
+}
+
+
+.writing {
+border-color:red;
+}
+
+
+a {
+color: white;
+text-decoration:none;
+font-weight:lighter;
+}
+
+a:hover {
+color: red;
+}
+
+h1, h4, p{
+color: white;
+font-weight:lighter;
+margin-top: 20px;
+}
+
+h5 {
+color:#E8E8E8;
+font-weight:lighter;
+}
+
+#main {
+min-height: 400px;
+}
+
+#main li {
+text-align: left;
+margin-left:270px
+}
+
+#about {
+min-height: 400px;
+margin-left: 250px;
+}
+
+
+#headline {
+color: white;
+width: 200px;
+font-size: 16px;
+background-color:black;
+border:none;
+}
+
+#description {
+color: green;
+width: 400px;
+font-size: 16px
+}
+
+#body_text {
+width: 600px;
+height: 200px;
+font-size: 16px;
+color: white;
+background-color:black;
+border:none;
+}
+
+#body {
+width: 400px;
+}
+
+#footer{
+margin-top: 30px;
+}
+
+#footer li{
+display: inline;
+font-size: 16px;
+padding: 1em;
+}
+
+.primary {
+background-color: black;
+color: white;
+font-family: 'arial';
+border:none;
+font-size: 16px;
+}

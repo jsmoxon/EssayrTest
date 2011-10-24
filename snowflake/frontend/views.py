@@ -72,3 +72,6 @@ def question_submit(request):
 
 def about(request):
     return render_to_response('about.html')
+    
+def pk(request):
+    return render_to_response('pk.html')

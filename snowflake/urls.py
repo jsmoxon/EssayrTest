@@ -7,7 +7,10 @@ from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('frontend.views',
+    (r'^admin/doc/', include('django.contrib.admindocs.urls')),
+    (r'^admin/', include(admin.site.urls)),
     (r'^$', 'home'),
+    (r'^pk', 'pk'),
    # (r'^homepage/', 'homepage'),
     (r'^(?P<entry_id>\d+)/$', 'detail'),
     (r'^answer/', CreateView.as_view(model=Response, success_url="/frontend/")),
@@ -20,9 +23,7 @@ urlpatterns = patterns('frontend.views',
     (r'^about', 'about'),
     (r'^single/(?P<entry_id>\d+)/upvote/', 'upvote'),                   
     (r'^post/(?P<entry_id>\d+)/(?P<answer_id>\d+)/upvote_post/', 'upvote_post')               
-    #url(r'^yeah/', 'yeah'),
-    #(r'^admin/doc/', include('django.contrib.admindocs.urls')),
-    #(r'^admin/', include(admin.site.urls)),
+
 )
 
 urlpatterns += patterns('django.contrib.staticfiles.views',

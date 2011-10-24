@@ -1,20 +1,20 @@
-{% extends "base.html" %}
-
+{% extends "base.html"%}
 
 {% block main %}
 <center><h1>{{p.question}}</h1></center>
-<center><h5>{{p.desc}}</h5></center>
+	<div id="description"><center><h4>{{p.desc}}</h4></center>
+	</div>
 </br>
 <div id="main"><center>
 <form action="/submit/{{p.id}}/enter/" method="post">
 {% csrf_token %}
 <input type="text" name="headline" id="headline" value="Title"/>
 </br>
-<textarea name="body_text" id="body_text" class="writing" >Start typing here.</textarea>
+<textarea name="body_text" id="body_text">Enter your story or essay here.</textarea>
 </br></br>
-<input class="primary" type="submit" value="Submit"/>
-<a href="/single/{{p.id}}/">See previous answers</a>
+<input class="primary" type="submit" value="Submit" />
 </form>
+<a href="/single/{{p.id}}/">See previous answers</a>
 
 </center></div><!--closes main-->
 

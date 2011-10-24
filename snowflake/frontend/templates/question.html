@@ -8,11 +8,11 @@
 
 <form action="/question/enter/" method="post">
 {% csrf_token %}
-<textarea id="headline" name="question" cols="50" rows="1" value="kldfj">Headline...</textarea>
+<textarea id="headline" name="question" cols="50" rows="1" value="kldfj">Title of your post</textarea>
 </br></br>
-<textarea name="desc" id="description">Enter a brief description here...</textarea>
+<textarea name="desc" id="description">Enter a brief description here.</textarea>
 </br></br>
-<input type="submit" value="Submit!" class="primary">
+<input type="submit" value="Post" class="primary">
 </form>
 </center>
 {% endblock main %}
