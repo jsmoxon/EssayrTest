@@ -1,24 +1,24 @@
 {% load static %}
 <html>
 <head>
-<!--<link rel="stylesheet" href="http://twitter.github.com/bootstrap/assets/css/bootstrap-1.2.0.min.css">
-
--->
+<link rel="stylesheet" href="http://twitter.github.com/bootstrap/assets/css/bootstrap-1.2.0.min.css">
 <link rel="stylesheet" href="{% get_static_prefix%}css/pk.css">
 
 </head>
 
 <body>
-<div class="container">
+<div id="container">
+<div id="header">
+</div> <!--closes #header. This is just an empty div to force a top-margin -->
 {% block main %}
 {% endblock main %}
 
-<div class="span16" id="footer"><center>
+<div id="footer" class="center">
 <li><a href="/">Essayr</a></li>
 <li><a href="/about/">About</a></li>
 <li><a href="/">Past Questions</a></li>
 <li><a href="/question/">Submit a Question</a></li>
-</center>
 </div><!--closes footer-->
 </div><!--closes container-->
+
 </body>

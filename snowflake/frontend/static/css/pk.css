@@ -1,10 +1,104 @@
 body {
 background-color: black;
-font-family: 'arial';
+}
+
+#header {
+padding-top:20px;
+background-color:black;
+}
+
+.question{
+color:white;
+}
+
+.description{
+color: #CDC9C9;
+}
+
+h1, a, p {
+color: white;
+font-family: 'helvetica';
 font-weight: lighter;
 }
 
 
+/* {font: font-style font-variant font-weight font-size/line-height font-family;}
+*/
+
+.input {
+min-width: 90%;
+min-height:50%;
+background-color:black;
+border:none;
+resize:both;
+color: white;
+font-family: 'helvetica';
+font-weight: lighter;
+}
+
+#body_text {
+-webkit-appearance: none;
+}
+
+.center {
+margin-left:auto;
+margin-right:auto;
+width:60%;
+}
+
+#footer{
+margin-top: 30px;
+color: #CDC9C9;
+}
+
+#footer li{
+display: inline;
+padding: 1em;
+margin-left:auto;
+margin-right:auto;
+width:90%;
+}
+
+#writing {
+background-color:;
+}
+
+#writingnav li{
+display: inline;
+padding: 1em;
+}
+
+#submitbutton {
+background-color:black;
+color:white;
+border:none;
+}
+
+
+textarea:focus{
+border-color:#black; 
+-webkit-box-shadow:0 0 0px rgba(171, 41, 32, 0.5);
+-moz-box-shadow:0 0 0px rgba(171, 41, 32, 0.5);
+box-shadow:0 0 0px rgba(171, 41, 32, 0.5);
+}
+
+/* Twitter bootstrap's css 
+textarea {
+border-color:#c87872;
+-webkit-box-shadow:0 0 3px rgba(171, 41, 32, 0.25);
+-moz-box-shadow:0 0 3px rgba(171, 41, 32, 0.25);
+box-shadow:0 0 3px rgba(171, 41, 32, 0.25);
+}
+
+form div.error input:focus,form div.error textarea:focus{
+border-color:#b9554d; 
+-webkit-box-shadow:0 0 6px rgba(171, 41, 32, 0.5);
+-moz-box-shadow:0 0 6px rgba(171, 41, 32, 0.5);
+box-shadow:0 0 6px rgba(171, 41, 32, 0.5);
+}
+*/
+
+/*
 .writing {
 border-color:red;
 }
@@ -73,20 +167,14 @@ border:none;
 width: 400px;
 }
 
-#footer{
-margin-top: 30px;
-}
 
-#footer li{
-display: inline;
-font-size: 16px;
-padding: 1em;
-}
 
 .primary {
 background-color: black;
 color: white;
-font-family: 'arial';
+font-family: 'helvetica';
 border:none;
 font-size: 16px;
 }
+
+*/

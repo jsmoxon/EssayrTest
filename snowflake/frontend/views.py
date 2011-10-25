@@ -14,6 +14,7 @@ def home(request):
 def detail(request, entry_id):
     p = get_object_or_404(Entry, pk=entry_id)
     return render_to_response('response_form.html', {"p": p}, context_instance=RequestContext(request))
+
 #shows a single question and text box for response
 def submit(request, entry_id):
     p = get_object_or_404(Entry, pk=entry_id)

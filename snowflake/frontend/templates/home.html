@@ -1,9 +1,9 @@
 {% extends "base.html"%}
 
 {% block main %}
-<div id="main">
+<div id="main" class="center">
 </br></br>
-<center><h1>Questions</h1>
+<h1>Questions</h1>
 {% for entry in p reversed %}
 <li><a href="/submit/{{entry.id}}/"> {{entry.question }}</a> - {{entry.answers}} </li>
 
