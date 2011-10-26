@@ -1,0 +1,5 @@
+$(document).ready(function(){
+	$('img.menu_img').click(function () {
+		$('ul.page_nav').stop().slideDown('slow');
+	    });
+    });

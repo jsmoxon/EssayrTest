@@ -12,8 +12,7 @@
 </head>
 
 <body>
-<img src="{% get_static_prefix%}images/logo3.jpg" class="menu_img" />
-
+<img src="{% get_static_prefix%}images/logo.jpg" class="menu_img" />
 
 <div id="container">
 <div id="header">
@@ -30,8 +29,5 @@
 </ul><!--closes page_nav-->
 </div><!--closes footer-->
 </div><!--closes container-->
-
-
-
 
 </body>
