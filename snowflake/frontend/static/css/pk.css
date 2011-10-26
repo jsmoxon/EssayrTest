@@ -11,6 +11,9 @@ background-color:black;
 color:white;
 }
 
+li {
+}
+
 .description{
 color: #CDC9C9;
 }
@@ -24,9 +27,22 @@ font-weight: lighter;
 
 /* {font: font-style font-variant font-weight font-size/line-height font-family;}
 */
-
 .input {
-min-width: 90%;
+min-width: 100%;
+min-height:60px;
+background-color:white;
+opacity:0.9;
+filter:alpha(opacity=90); /* For IE8 and earlier */
+border:none;
+resize:both;
+color: #black;
+font-family: 'helvetica';
+font-weight: lighter;
+}
+
+.prose {
+min-width: 100%;
+max-width: 650px;
 min-height:50%;
 background-color:black;
 border:none;
@@ -48,7 +64,8 @@ width:60%;
 
 #footer{
 margin-top: 30px;
-color: #CDC9C9;
+background-color:black;
+text-align: center;
 }
 
 #footer li{
@@ -59,8 +76,19 @@ margin-right:auto;
 width:90%;
 }
 
+#footer a {
+color: #CDC9C9;
+}
+
+
+
 #writing {
-background-color:;
+background-color:black;
+text-align: center;
+}
+
+#writingnav {
+text-align: center;
 }
 
 #writingnav li{
@@ -80,6 +108,14 @@ border-color:#black;
 -webkit-box-shadow:0 0 0px rgba(171, 41, 32, 0.5);
 -moz-box-shadow:0 0 0px rgba(171, 41, 32, 0.5);
 box-shadow:0 0 0px rgba(171, 41, 32, 0.5);
+}
+
+#headline {
+resize:none;
+}
+
+#description {
+resize:none;
 }
 
 /* Twitter bootstrap's css 

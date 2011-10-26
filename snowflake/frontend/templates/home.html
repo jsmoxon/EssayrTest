@@ -2,10 +2,11 @@
 
 {% block main %}
 <div id="main" class="center">
-</br></br>
+</br>
+</br>
 <h1>Questions</h1>
 {% for entry in p reversed %}
-<li><a href="/submit/{{entry.id}}/"> {{entry.question }}</a> - {{entry.answers}} </li>
+<li>({{entry.answers}}) <a href="/submit/{{entry.id}}/"> {{entry.question }}</a></li>
 
 {% endfor %}
 </center>

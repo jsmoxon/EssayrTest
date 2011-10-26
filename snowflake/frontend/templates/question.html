@@ -2,17 +2,18 @@
 
 {% block main%}
 
-
-<center>
+<div id="main" class="center">
 <h1>Submit a question</h1>
+<div id="writing" >
+	<form action="/question/enter/" method="post">
+	{% csrf_token %}
+	<textarea id="headline" name="question" value="kldfj" class="input">Title of your post</textarea>
+	</br></br>
+	<textarea id="description" name="desc" class="input">Enter a brief description here.</textarea>
+	</br></br>
+	<input id="submitbutton" type="submit" value="Post your question"  class="primary">
+	</form>
+</div> <!--closes #writing-->	
 
-<form action="/question/enter/" method="post">
-{% csrf_token %}
-<textarea id="headline" name="question" cols="50" rows="1" value="kldfj">Title of your post</textarea>
-</br></br>
-<textarea name="desc" id="description">Enter a brief description here.</textarea>
-</br></br>
-<input type="submit" value="Post" class="primary">
-</form>
-</center>
+</div><!--closes main-->
 {% endblock main %}
