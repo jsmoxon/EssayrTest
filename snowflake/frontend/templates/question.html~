@@ -1,0 +1,24 @@
+{% load static %}
+<html>
+<head>
+<link rel="stylesheet" href="http://twitter.github.com/bootstrap/assets/css/bootstrap-1.2.0.min.css">
+
+</head>
+
+<body>
+<div class="container">
+<h1>Submit a question</h1>
+
+<form action="/blogonymous/question/enter/" method="post">
+{% csrf_token %}
+<textarea name="question" cols="50" rows="1" value="kldfj">Headline...</textarea>
+</br></br>
+<textarea name="desc" cols="50" rows="10">Enter a brief description here...</textarea>
+</br></br>
+<input type="submit" value="Submit!" class="btn primary">
+</form>
+
+</div>
+
+
+</body>

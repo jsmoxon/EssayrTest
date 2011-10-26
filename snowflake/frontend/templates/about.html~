@@ -1,0 +1,34 @@
+<html>
+<head>
+<link rel="stylesheet" href="http://twitter.github.com/bootstrap/assets/css/bootstrap-1.2.0.min.css">
+
+</head>
+
+<body>
+<div class="container">
+</br></br>
+<h1>About</h1>
+</br>
+<p>Essayer is the French word for “to try”. That's what this site is: an attempt, and a humble one at that. 
+</br></br>
+The main attempt is to stimulate thought through questions. The hope is that having a pointed question will encourage a thoughtful search for answers. 
+</br></br>
+
+It's also an attempt at fostering intimate communication. We often skip the important stuff or refuse to share it with each other because it isn't the right time or it doesn't feel pressing.
+</br></br>
+The site is deliberately simple. It encourages anonymity and exclusiveness, not for their own sake but to encourage people to participate in the community. Throw a thought or response or answer out there. No judgment will come. Only those that participate can see your response and they won’t know you wrote it anyway. 
+</br></br>
+The project is inspired by my friends' experiences with writing and <a href="http://www.paulgraham.com/essay.html">this essay</a> by Paul Graham.
+</p>
+
+
+
+</br>
+<a href="/blogonymous/question/">Submit a question!</a>
+</br>
+<a href="/blogonymous/">Home</a>
+
+</div>
+
+
+</body>

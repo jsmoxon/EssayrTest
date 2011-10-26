@@ -14,13 +14,13 @@
 {% for answer in p.response_set.all %}
 <h4>{{answer.headline}}</h4>
 <p>{{answer.body_text|linebreaks}}</p>
-<form action="/single/{{ p.id }}/upvote/" method="post">
+<form action="/frontend/single/{{ p.id }}/upvote/" method="post">
 {% csrf_token %}
 <input type="submit" class="btn primary" value="+1" name="votes" />
 </form>
 {% endfor%}
 
-<a href="/">Go Home!</a>
+<a href="/frontend/">Go Home!</a>
 
 
 </div>
