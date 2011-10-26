@@ -1,0 +1,76 @@
+{% load static %}
+<html>
+<head>
+<link rel="stylesheet" href="{% get_static_prefix%}css/twitterbootstrap.css">
+<!--<link rel="stylesheet" href="http://twitter.github.com/bootstrap/assets/css/bootstrap-1.2.0.min.css">
+-->	
+<link rel="stylesheet" href="{% get_static_prefix%}css/pk.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.2/jquery-ui.min.js"></script>
+
+<script>
+$(function() {
+    
+$('#example-one')  
+  function elementSupportsAttribute(element, attribute) {
+	var test = document.createElement(element);
+	if (attribute in test) {
+	  return true;
+	} else {
+	  return false;
+	}
+  };
+  
+  if (!elementSupportsAttribute('textarea', 'placeholder')) {
+	// Fallback for browsers that don't support HTML5 placeholder attribute
+	$("#example-three")
+	  .data("originalText", $("#example-three").text())
+	  .css("color", "#999")
+	  .focus(function() {
+		  var $el = $(this);
+		  if (this.value == $el.data("originalText")) {
+			this.value = "";
+		  }
+	  })
+	  .blur(function() {
+		if (this.value == "") {
+			this.value = $(this).data("originalText");
+		}
+	  });
+  } else {
+	// Browser does support HTML5 placeholder attribute, so use it.
+	$("#example-three")
+	  .attr("placeholder", $("#example-three").text())
+	  .text("");
+  }
+      
+});
+  </script>
+  
+</head>
+
+<body>
+<div id="page-wrap">
+<h2>Placeholder text (jQuery + HTML5)</h2>
+<textarea id="example-three" cols="30" rows="5">
+Remember, be nice!
+</textarea>
+ 
+                
+<div id="main" class="center">
+<h1>Submit a question</h1>
+<div id="writing" >
+	<form action="/question/enter/" method="post">
+	<textarea id="headline" name="question" value="kldfj" class="input">Title of your post</textarea>
+	</br></br>
+	<textarea id="description" name="desc" class="input">Enter a brief description here.</textarea>
+	</br></br>
+	<input id="submitbutton" type="submit" value="Post your question" class="primary">
+	</form>
+</div> <!--closes #writing-->	
+
+</div><!--closes main-->
+
+</body>
+
+</html>
