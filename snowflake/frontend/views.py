@@ -29,7 +29,8 @@ def single(request, entry_id):
 #submits a response to an entry
 def enter(request, entry_id):
     p = get_object_or_404(Entry, pk=entry_id) 
-    entry = p.response_set.create(headline=request.POST['headline'])
+    first_sentence = request.POST['body_text']
+    entry = p.response_set.create(headline=first_sentence[:20])
     entry.save()
     entry.body_text = request.POST['body_text']
     entry.save()
