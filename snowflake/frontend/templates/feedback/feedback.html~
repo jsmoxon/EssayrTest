@@ -10,7 +10,7 @@
 
 <body>
 
-<h1>Essayr</h1>
+<h1><a href="/">Essayr</a></h1>
 <h3>Feedback!</h3>
 <div id="feedback">
 <form action="/feedback/submit/" method="get">
