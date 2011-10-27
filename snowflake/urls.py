@@ -22,8 +22,12 @@ urlpatterns = patterns('frontend.views',
     (r'^question/enter/$', 'question_submit'),
     (r'^about', 'about'),
     (r'^single/(?P<entry_id>\d+)/upvote/', 'upvote'),                   
-    (r'^post/(?P<entry_id>\d+)/(?P<answer_id>\d+)/upvote_post/', 'upvote_post')               
+    (r'^post/(?P<entry_id>\d+)/(?P<answer_id>\d+)/upvote_post/', 'upvote_post'),
+)
 
+urlpatterns += patterns('',
+    (r'^feedback/$', 'feedback.views.home'),
+    (r'^feedback/submit/$', 'feedback.views.feedback_submit'),
 )
 
 urlpatterns += patterns('django.contrib.staticfiles.views',

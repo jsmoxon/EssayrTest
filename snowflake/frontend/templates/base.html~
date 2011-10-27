@@ -12,8 +12,7 @@
 </head>
 
 <body>
-<img src="{% get_static_prefix%}images/logo.jpg" class="menu_img" />
-
+<img src="{% get_static_prefix%}images/logo3.jpg" class="menu_img" />
 <div id="container">
 <div id="header">
 </div> <!--closes #header. This is just an empty div to force a top-margin -->
@@ -26,8 +25,8 @@
 <li><a href="/about/">About</a></li>
 <li><a href="/">Past Questions</a></li>
 <li><a href="/question/">Submit a Question</a></li>
+<li><a href="/feedback/">Feedback</a></li>
 </ul><!--closes page_nav-->
 </div><!--closes footer-->
 </div><!--closes container-->
-
 </body>
