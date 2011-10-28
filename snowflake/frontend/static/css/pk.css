@@ -26,6 +26,9 @@ font-family: 'helvetica';
 font-weight: lighter;
 }
 
+#question_list {
+list-style-type:none;
+}
 
 .input {
 min-width: 100%;
@@ -191,8 +194,8 @@ min-height: 400px;
 
 #main li {
 text-align: left;
-margin-left:270px
-}
+margin-left:270px;
+list-style-type:none;}
 
 #about {
 min-height: 400px;

@@ -5,6 +5,7 @@ background-color: black;
 #header {
 padding-top:20px;
 background-color:black;
+text-align: center;
 }
 
 .menu_img  {
@@ -64,7 +65,7 @@ width:60%;
 #header{
 margin-top: 30px;
 background-color:black;
-text-align: center;
+
 }
 
 #header ul {
@@ -190,8 +191,8 @@ min-height: 400px;
 
 #main li {
 text-align: left;
-margin-left:270px
-}
+margin-left:270px;
+list-style-type:none;}
 
 #about {
 min-height: 400px;
