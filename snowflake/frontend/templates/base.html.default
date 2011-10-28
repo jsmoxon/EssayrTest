@@ -1,0 +1,50 @@
+{% load static %}
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<link rel="stylesheet" href="{% get_static_prefix%}css/twttr.css">
+<link rel="stylesheet" href="{% get_static_prefix%}css/pk.css">
+<script type="text/javascript" src="{% get_static_prefix %}js/jquery.js"></script>
+<<<<<<< HEAD
+<script type="text/javascript" src="{% get_static_prefix %}js/pk.js"></script>
+<script type="text/javascript" src="{% get_static_prefix %}js/logohover.js"></script>
+<script type="text/javascript">
+  function feedbackPopup() {
+  window.open("/feedback/", "feedbackWindow", "status=1, height = 400, width = 400, resizable = 0")
+  }
+</script>
+=======
+
+
+>>>>>>> a7ec6ae0c90a111851ffbc82637ae62081429859
+<title>Essayr</title>
+
+</head>
+
+<body>
+<img src="{% get_static_prefix%}images/logo_stripe.png" class="menu_img" />
+<div id="container">
+<div id="header">
+</div> <!--closes #header. This is just an empty div to force a top-margin -->
+{% block main %}
+{% endblock main %}
+
+<div id="footer" class="center">
+<ul class="page_nav">
+<li><a href="/">Essayr</a></li>
+<li><a href="/about/">About</a></li>
+<li><a href="/questions/">Past questions</a></li>
+<li><a href="/question/">Submit question</a></li>
+<li><a onClick="feedbackPopup()" href="">Feedback</a></li>
+</ul><!--closes page_nav-->
+</div><!--closes footer-->
+</div><!--closes container-->
+
+<!--these JS are here to speed up page load time-->
+<script type="text/javascript" src="{% get_static_prefix %}js/pk.js"></script>
+<!--<script type="text/javascript" src="{% get_static_prefix %}js/logohover.js"></script>
+-->
+</body>
