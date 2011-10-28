@@ -1,16 +1,16 @@
-body {
+ody {
 background-color: black;
 }
 
 #header {
 padding-top:20px;
 background-color:black;
-text-align: center;
 }
 
 .menu_img  {
+margin-left: 10px;
 margin-top: 10px;
-margin-bottom:-40px;}
+}
 
 .question{
 color:white;
@@ -62,17 +62,13 @@ margin-right:auto;
 width:60%;
 }
 
-#header{
+#footer{
 margin-top: 30px;
 background-color:black;
-
+text-align: center;
 }
 
-#header ul {
-margin-bottom: 50px;
-}
-
-#header li{
+#footer li{
 display: inline;
 padding: 1em;
 margin-left:auto;
