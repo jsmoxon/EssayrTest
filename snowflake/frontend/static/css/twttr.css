@@ -17,16 +17,19 @@ textarea.xxlarge{overflow-y:scroll;}
 input[readonly]:focus,textarea[readonly]:focus,input.disabled{background:#f5f5f5;border-color:#ddd;-webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none;}
 
 
-a{color:#0069d6;text-decoration:none;line-height:inherit;font-weight:inherit;}a:hover{color:#0050a3;text-decoration:underline;}
-p{font-size:13px;font-weight:normal;line-height:18px;margin-bottom:9px;}p small{font-size:11px;color:#bfbfbf;}
-h1,h2,h3,h4,h5,h6{font-weight:bold;color:#404040;}h1 small,h2 small,h3 small,h4 small,h5 small,h6 small{color:#bfbfbf;}
-h1{margin-bottom:18px;font-size:30px;line-height:36px;}h1 small{font-size:18px;}
-h2{font-size:24px;line-height:36px;}h2 small{font-size:14px;}
+a{color:#0069d6;text-decoration:none;line-height:inherit;font-weight:inherit;}
+a:hover{color:#0050a3;text-decoration:underline;}
+p{font-size:13px;font-weight:normal;line-height:18px;margin-bottom:9px;}
+p small{font-size:11px;color:#bfbfbf;}
+h1,h2,h3,h4,h5,h6{font-weight:bold;color:#404040;}
+h1{margin-bottom:18px;font-size:30px;line-height:36px;}
+h2{font-size:24px;line-height:36px;}
 h3,h4,h5,h6{line-height:36px;}
-h3{font-size:18px;}h3 small{font-size:14px;}
-h4{font-size:16px;}h4 small{font-size:12px;}
+h3{font-size:18px;}
+h4{font-size:16px;}
 h5{font-size:14px;}
 h6{font-size:13px;color:#bfbfbf;text-transform:uppercase;}
+
 ul,ol{margin:0 0 18px 25px;}
 ul ul,ul ol,ol ol,ol ul{margin-bottom:0;}
 ul{list-style:disc;}
