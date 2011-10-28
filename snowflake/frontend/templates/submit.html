@@ -5,26 +5,29 @@
 <div id="main" class="center">
 <p class="question" class="center">{{p.question}}</p>
 <p class="description" class="center">{{p.desc}}</p>
-</br>
+<br />
 	<div id="writing" >
 		<form action="/submit/{{p.id}}/enter/" method="post">
 		{% csrf_token %}	
-		<textarea name="body_text" id="body_text" class="prose" >
+		<textarea name="body_text" id="body_text" class="prose" rows="2" cols="20" >
 		</textarea>
-		</br>
-		</br>
+		<br />
+		<br />
 	</div> <!--closes #writing-->
 	<div id="writingnav" class="center"> <!--used to try to center the two buttons below. -->
+		<ul>
 		<li>	
 		<input id="submitbutton" class="primary" type="submit" value="Submit"/>
 		</li>
-		</form>
 		<li><a href="/single/{{p.id}}/">See previous answers</a>
 		</li>
+		</form>
+		</ul>
 	</div> <!--closes #writingnav -->
 </div><!--closes main-->
 
-
+<!--this JS is here so that the autoselect of the first form field (which is what the js does) doesn't occur in pages other than the submit page
+-->
 <script type="text/javascript">
 $(document).ready(function() {
 	$(function () {

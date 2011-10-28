@@ -1,19 +1,22 @@
 {% extends "base.html"%}
 
 {% block main %}
+<div id="main" class="center">
+<p class="question" class="center">{{p.question}}</p>
+<p class="description" class="center">{{p.desc}}</p>
+<br />
 
-<h1>{{p.question}}</h1>
-<p>{{p.desc}}</p>
 {% for answer in q reversed %}
-<h4>{{answer.headline}}</h4>
-<div id="body">
-<p>{{answer.body_text|linebreaks|truncatewords:100}}</p>
-<a href="/post/{{p.id}}/{{answer.id}}/">See full post</a>
-<form action="/single/{{ p.id }}/upvote/" method="post">
-{% csrf_token %}
-<input type="hidden" name="headline" id="headline{{ forloop.counter }}" value="{{ answer.id}}" />
-<input type="submit" class="primary" value="upvote" />
-</form>
-</div>
+	<div id="body">
+	<p>{{answer.body_text|linebreaks|truncatewords:100}}</p>
+	<a href="/post/{{p.id}}/{{answer.id}}/">See full post</a>
+	<form action="/single/{{ p.id }}/upvote/" method="post" >
+	{% csrf_token %}
+	<input type="hidden" name="headline" id="headline{{ forloop.counter }}" value="{{ answer.id}}" />
+	<input type="submit" class="primary" value="upvote" id="submitbutton"/>
+	</form>
+	</div>
+
+</div><!--closes main-->
 {% endfor %}
 {% endblock main%}
