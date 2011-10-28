@@ -29,7 +29,7 @@
 <ul class="page_nav">
 <li><a href="/">Essayr</a></li>
 <li><a href="/about/">About</a></li>
-<li><a href="/">Past Questions</a></li>
+<li><a href="/questions/">Past Questions</a></li>
 <li><a href="/question/">Submit a Question</a></li>
 <li><a onClick="feedbackPopup()" href="">Feedback</a></li>
 </ul><!--closes page_nav-->
