@@ -8,8 +8,7 @@ admin.autodiscover()
 
 urlpatterns = patterns('frontend.views',
     (r'^$', 'home'),
-   # (r'^homepage/', 'homepage'),
-    (r'^(?P<entry_id>\d+)/$', 'detail'),
+    (r'^test/', 'home'),                  
     (r'^answer/', CreateView.as_view(model=Response, success_url="/frontend/")),
     (r'^submit/(?P<entry_id>\d+)/$', 'submit'),
     (r'^submit/(?P<entry_id>\d+)/enter/', 'enter'),

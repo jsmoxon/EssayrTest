@@ -11,13 +11,14 @@ def home(request):
     p = Entry.objects.order_by('answers')
     return render_to_response("home.html", {"entries": entries, "p": p})
 
-def detail(request, entry_id):
-    p = get_object_or_404(Entry, pk=entry_id)
-    return render_to_response('response_form.html', {"p": p}, context_instance=RequestContext(request))
-
 #shows a single question and text box for response
 def submit(request, entry_id):
     p = get_object_or_404(Entry, pk=entry_id)
+    return render_to_response('submit.html', {"p": p}, context_instance=RequestContext(request))
+
+#show question of the day as the home page. Change pk to change question
+def question_of_day(request):
+    p = get_object_or_404(Entry, pk=3)
     return render_to_response('submit.html', {"p": p}, context_instance=RequestContext(request))
 
 #shows a question and all of its responses
