@@ -1,11 +1,14 @@
-{% extends "blogonymous/base.html" %}
+{% extends "base.html" %}
 {% block main %}
+
 
 <h1>{{p.question}}</h1>
 <p>{{p.desc}}</p>
 <h4>{{q.headline}}</h4>
+<div id="body">
 <p>{{q.body_text|linebreaks}}</p>
-<form action="/blogonymous/post/{{ p.id }}/{{ q.id }}/upvote_post/" method="get">
-<input type="submit" class="btn primary" value="upvote" />
+<form action="/post/{{ p.id }}/{{ q.id }}/upvote_post/" method="get">
+<input type="submit" class="primary" value="upvote" />
 </form>
+</div>
 {% endblock main%}

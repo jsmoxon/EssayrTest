@@ -1,14 +1,13 @@
 {% extends "base.html" %}
 {% block main %}
 
-
-<h1>{{p.question}}</h1>
+<div id="response_item" class="center">
+<p class="question">{{p.question}}</h1>
 <p>{{p.desc}}</p>
-<h4>{{q.headline}}</h4>
-<div id="body">
+<h5>{{q.headline}}...</h5>
 <p>{{q.body_text|linebreaks}}</p>
 <form action="/post/{{ p.id }}/{{ q.id }}/upvote_post/" method="get">
-<input type="submit" class="primary" value="upvote" />
+<input type="submit" class="upvote" value="upvote" />
 </form>
 </div>
 {% endblock main%}

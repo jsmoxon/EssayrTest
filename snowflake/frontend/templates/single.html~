@@ -5,7 +5,7 @@
 <p class="question" class="center">{{p.question}}</p>
 <p class="description" class="center">{{p.desc}}</p>
 <br />
-
+</div><!--closes main-->
 {% for answer in q reversed %}
 	<div id="body" class="center">
 	<h5>{{answer.headline}}</h5>
@@ -17,7 +17,5 @@
 	<input type="submit" class="primary" value="upvote" id="submitbutton"/>
 	</form>
 	</div>
-
-</div><!--closes main-->
 {% endfor %}
 {% endblock main%}

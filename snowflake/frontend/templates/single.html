@@ -7,14 +7,14 @@
 <br />
 </div><!--closes main-->
 {% for answer in q reversed %}
-	<div id="body" class="center">
-	<h5>{{answer.headline}}</h5>
+	<div id="response_item" class="center">
+	<h5>{{answer.headline}}...</h5>
 	<p>{{answer.body_text|linebreaks|truncatewords:100}}</p>
 	<a href="/post/{{p.id}}/{{answer.id}}/">See full post</a>
 	<form action="/single/{{ p.id }}/upvote/" method="post" >
 	{% csrf_token %}
 	<input type="hidden" name="headline" id="headline{{ forloop.counter }}" value="{{ answer.id}}" />
-	<input type="submit" class="primary" value="upvote" id="submitbutton"/>
+	<input type="submit" class="upvote" value="upvote"/>
 	</form>
 	</div>
 {% endfor %}
