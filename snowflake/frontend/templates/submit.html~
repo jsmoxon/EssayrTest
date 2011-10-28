@@ -9,7 +9,7 @@
 	<div id="writing" >
 		<form action="/submit/{{p.id}}/enter/" method="post">
 		{% csrf_token %}	
-		<textarea name="body_text" id="body_text" class="prose" rows="20" cols="20" >
+		<textarea name="body_text" id="body_text" class="prose" rows="2" cols="20" >
 		</textarea>
 		<br />
 		<br />
