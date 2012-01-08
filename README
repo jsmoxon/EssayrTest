@@ -1,1 +1,10 @@
-setup
+Essayr (available at http://www.essayr.com) is my first coding project. My friend Peter
+and I used it as a way to teach ourselves to program. It's written with Python and the Django framework. 
+
+The goal of the site is to create an earnest writing forum where people can post and respond thoughtfully
+to questions from one another. Anonymity allows for complete honesty and the goal is to create a mosaic of 
+stories that are interesting for people to read. We have a few friends using the site currently. 
+
+I'm proud of it becuase prior to working on this site I had no prior programming experience. The site and idea
+still have a long way to go, but I'll never forget how satisfied I was when I built it and was able to share it 
+with friends. 
